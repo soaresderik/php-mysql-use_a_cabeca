@@ -1,0 +1,20 @@
+form label {
+  display: inline-block;
+  width: 225px;
+  font-weight: bold;
+  
+}
+
+#container
+{
+	width: 550px;
+	margin: auto;
+	background-color: white;
+	padding: 15px;
+}
+
+body
+{
+	background-color: #f1f1f1;
+}
+

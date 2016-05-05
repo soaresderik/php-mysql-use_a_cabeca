@@ -9,7 +9,8 @@
 
 <?php 
 
-	$name = $_POST['firstname'] .' '. $_POST['lastname'];
+	$first_name = $_POST['firstname'];
+	$last_name = $_POST['lastname'];
 	$how_many = $_POST['howmany'];
 	$what_they_did = $_POST['whattheydid'];
 	$when_it_happened = $_POST['whenithappened'];
@@ -21,16 +22,31 @@
 	$subject = 'Fui abduzido por aliens - Relatar uma abdução';
 	$other = $_POST['other'];
 
-	$msg = "$name Você foi abduzido $when_it_happened  E retornou  $how_long .\n ".
+
+
+	$msg = "$first_name Você foi abduzido $when_it_happened  E retornou  $how_long .\n ".
 		   "Numero de alienigenas: $how_many\n ".
 		   " Descrição deles: $alien_description\n".
 		   "Os Alienigenas Fizeram isso: $what_they_did \n".
 		   " Você viu o Fang ? $fang_spotted <br>".
 		   "Outros Comentários: $other";
 
-	mail($to, $subject, $msg, 'From: '. $email);
+	
+		   // Abre Conexão com o banco de dados
+$dbc = mysqli_connect('localhost', 'root', '', 'aliendatabase') or die('Erro ao tentar Conectar ao banco de dados');
 
-	echo $msg;
+		$query = "INSERT INTO aliens_abduction (first_name,last_name,when_it_happened,".
+				"how_long,how_many,alien_description,what_they_did, fang_spotted, other, email)".
+				"VALUES('$first_name', '$last_name', '$when_it_happened', '$how_long', '$how_many', '$alien_description',".
+				"'$what_they_did', '$fang_spotted', '$other',".
+				"'$email')";
+
+		$result = mysqli_query($dbc, $query) or die('Erro no Comando');
+		mysqli_close($dbc);
+			// Fecha Conexão com o Banco de dados
+
+
+	echo $msg; // Essa mensagem aparece se a conexão funcioanar
 	
  ?>
 

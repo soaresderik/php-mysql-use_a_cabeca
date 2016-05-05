@@ -7,8 +7,10 @@
 </head>
 <body>
 <div id="container">
+
 <h2>Fui Abduzido por Aliens - Relatar uma Abdução</h2>
 <p>Compartilhe sua história de abdução alienigena</p>
+
 <form method="post" action="report.php">
 	<label for="firstname">Nome:</label>
 	<input type="text" id="firstname" name="firstname"><br>
@@ -44,6 +46,7 @@
 	<textarea id="other" name="other"></textarea></br>
 	<input type="submit" value="Relatar Abdução" name="submit">
 </form>
+
 </div>
 </body>
 </html>

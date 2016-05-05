@@ -1,4 +1,4 @@
-create table aliens_abduction
+CREATE TABLE aliens_abduction
 (
  	first_name varchar(30),
 	last_name varchar(30), 
@@ -11,3 +11,6 @@ create table aliens_abduction
  	other varchar(100),
  	email varchar(50)
  );
+
+INSERT INTO aliens_abduction (first_name,last_name,when_it_happened,how_long,how_many,alien_description,what_they_did, fang_spotted, other, email)
+VALUES('Sally', 'Jones', '3 dias atras', '1 dia', 'Quatro', 'Verde com seis tentáculos', 'Nos apenas conversamos e brincamos com o cachorro', 'sim', 'Eu posso ter visto seu cachorro. Entre em contato', 'sally@gregs-list.net');

@@ -1,0 +1,8 @@
+CREATE DATABASE elvis_store;
+
+CREATE TABLE email_list
+(
+	first_name varchar(30),
+	last_name varchar(30),
+	email varchar(70)
+);

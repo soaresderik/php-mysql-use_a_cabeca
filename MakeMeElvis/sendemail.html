@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Faça-me Elvis</title>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">
+	<img src="elvislogo.gif">
+	<p><strong>Privado:</strong>SOMENTE para uso de Elmer<br>
+	escrever e enviar um e-mail para lista de correspodências de membros</p>
+
+	<form method="post" action="sendemail.php">
+	<label for="subject">Assunto: </label><br>
+	<input type="text" id="subject" name="subject" size="60"><br>
+
+	<label for="elvismail">Mensagem:</label><br>
+	<textarea id="elvismail" name="elvismail" rows="8" cols="60"></textarea><br>
+
+	<input type="Submit" value="Enviar">
+	</form>
+</div>
+</body>
+</html>

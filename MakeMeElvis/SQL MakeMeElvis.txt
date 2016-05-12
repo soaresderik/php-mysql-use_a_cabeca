@@ -6,3 +6,6 @@ CREATE TABLE email_list
 	last_name varchar(30),
 	email varchar(70)
 );
+
+ALTER TABLE email_list ADD id INT NOT NULL AUTO_INCREMENT FIRST, 
+ADD PRIMARY KEY (ID);
